@@ -16,7 +16,7 @@ const Exchanges = () => {
       key: "icon",
       render: ({ iconUrl, name }) => (
         <>
-          <Avatar className="exchange-image" src={iconUrl} />
+          <Avatar className="exchange-image" src={iconUrl} alt="exchange" />
           {name}
         </>
       ),
