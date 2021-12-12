@@ -4,6 +4,7 @@ import { Typography, Row, Col, Statistic } from "antd";
 import { useGetCryptosQuery } from "../services/cryptoApi";
 import { Link } from "react-router-dom";
 import { Cryptocurrencies, News } from "../components";
+import Loader from "./Loader";
 
 const { Title } = Typography;
 
@@ -67,7 +68,7 @@ const HomePage = () => {
       <News simplified />
     </>
   ) : (
-    <div>Loading...</div>
+    <Loader />
   );
 };
 

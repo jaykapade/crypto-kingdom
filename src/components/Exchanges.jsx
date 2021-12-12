@@ -1,7 +1,7 @@
 import React from "react";
-
+import Loader from "./Loader";
 const Exchanges = () => {
-  return <div>Exchanges</div>;
+  return <Loader />;
 };
 
 export default Exchanges;
