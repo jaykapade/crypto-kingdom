@@ -34,7 +34,7 @@ const CryptoDetails = () => {
     timeperiod,
   });
   const cryptoDetails = data?.data?.coin;
-  // console.log(cryptoDetails);
+  // console.log(coinHistory);
 
   if (isFetching) return <Loader />;
 
@@ -79,7 +79,7 @@ const CryptoDetails = () => {
     },
     {
       title: "Aprroved Supply",
-      value: cryptoDetails.approvedSupply ? (
+      value: cryptoDetails.supply.confirmed ? (
         <CheckOutlined />
       ) : (
         <StopOutlined />
@@ -102,7 +102,7 @@ const CryptoDetails = () => {
     <Col className="coin-detail-container">
       <Col className="coin-heading-container">
         <Title level={2} className="coin-name">
-          {data?.data?.coin.name} ({data?.data?.coin.slug}) Price
+          {data?.data?.coin.name} ({data?.data?.coin.symbol}) Price
         </Title>
         <p>
           {cryptoDetails.name} live price in US Dollar (USD). View value
